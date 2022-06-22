@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     put 'user/:id' => "users#update"
 
     delete 'user/:id' => "users#destroy"
+
+    get 'typeahead/:input' => "users#typeahead"
   end
 end

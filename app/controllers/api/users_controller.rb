@@ -2,6 +2,14 @@ module Api
   class UsersController < ApplicationController
     before_action :set_user, only: [:show, :update, :destroy]
 
+    def typeahead
+      key = params[:input]
+
+      @results = User.where("firstName LIKE ? or lastName LIKE ? or email LIKE ?", "%"+key+"%", "%"+key+"%", "%"+key+"%")
+
+      render json: @results, only: [:id, :firstName, :lastName, :email]
+    end
+
     # GET /users
     def index
       @users = User.all
