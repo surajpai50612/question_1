@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
-  resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :api do
+    resources :users
+
+    get 'user/:id' => "users#show"
+
+    post 'user/' =>  "users#create"
+
+    put 'user/:id' => "users#update"
+
+    delete 'user/:id' => "users#destroy"
+  end
 end
