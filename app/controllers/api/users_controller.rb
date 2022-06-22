@@ -2,6 +2,7 @@ module Api
   class UsersController < ApplicationController
     before_action :set_user, only: [:show, :update, :destroy]
 
+    # GET /typeahead/:input
     def typeahead
       key = params[:input]
 
@@ -17,12 +18,12 @@ module Api
       render json: @users, only: [:id, :firstName, :lastName, :email]
     end
 
-    # GET /users/1
+    # GET /user/:id
     def show
       render json: @user, only: [:id, :firstName, :lastName, :email]
     end
 
-    # POST /users
+    # POST /user
     def create
       @user = User.new(user_params)
 
@@ -33,7 +34,7 @@ module Api
       end
     end
 
-    # PATCH/PUT /users/1
+    # PATCH/PUT /user/:id
     def update
       if @user.update(user_params)
         render json: @user, only: [:id, :firstName, :lastName, :email]
@@ -42,7 +43,7 @@ module Api
       end
     end
 
-    # DELETE /users/1
+    # DELETE /user/:id
     def destroy
       @user.destroy
     end
