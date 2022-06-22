@@ -4,9 +4,7 @@ module Api
 
     # GET /typeahead/:input
     def typeahead
-      key = params[:input]
-
-      @results = User.where("firstName LIKE ? or lastName LIKE ? or email LIKE ?", "%"+key+"%", "%"+key+"%", "%"+key+"%")
+      @results = User.search(params[:input])
 
       render json: @results, only: [:id, :firstName, :lastName, :email]
     end
