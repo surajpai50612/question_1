@@ -1,6 +1,6 @@
 # README
 
-### 5. Document API in Postman: https://documenter.getpostman.com/view/13588624/UzBmPU22
+### 5. API in Postman Documentation: https://documenter.getpostman.com/view/13588624/UzBmPU22
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
