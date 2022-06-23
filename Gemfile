@@ -18,6 +18,8 @@ gem 'puma', '~> 4.1'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'simplecov', require: false, group: :test
+
 gem 'will_paginate'
 
 # Use Active Storage variant
