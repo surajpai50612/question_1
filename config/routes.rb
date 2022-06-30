@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
     # GET /users - returns all users from users table
-    resources :users
+    # resources :users
+    get 'users/' => "users#index"
 
     # GET /user/:id - returns specific user from users table
     get 'user/:id' => "users#show"
