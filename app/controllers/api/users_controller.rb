@@ -12,11 +12,15 @@ module Api
     # GET /users
     def index
       # Check if params provided for pagination
-      if(params[:page])
-        @users = User.paginate(page: params[:page], per_page: 3) # let default values per page be 3
-      else
-        @users = User.all
-      end
+      # if(params[:page])
+      #   @users = User.paginate(page: params[:page], per_page: 3) # let default values per page be 3
+      # else
+      #   @users = User.all
+      # end
+
+      # Check if params provided for pagination
+      page = params[:page] || 1
+      @users = User.paginate(page: page, per_page: 3) # let default values per page be 3
 
       render json: @users, only: [:id, :firstName, :lastName, :email]
     end
