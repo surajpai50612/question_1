@@ -17,16 +17,10 @@ module Api
       # else
       #   @users = User.all
       # end
-<<<<<<< HEAD
-      page = params[:page] || 1
-
-      @users = User.paginate(page: page, per_page: 3)
-=======
 
       # Check if params provided for pagination
       page = params[:page] || 1
       @users = User.paginate(page: page, per_page: 3) # let default values per page be 3
->>>>>>> 8e6006dddaaa8b23aeb341c49aff6aa744130fab
 
       render json: @users, only: [:id, :firstName, :lastName, :email]
     end
