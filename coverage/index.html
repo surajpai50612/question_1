@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-23T15:08:56+05:30">2022-06-23T15:08:56+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-30T11:29:23+05:30">2022-06-30T11:29:23+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  97.79%
+  98.31%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>181</b> relevant lines,
-    <span class="green"><b>177</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed. </span>
+    <b>178</b> relevant lines,
+    <span class="green"><b>175</b> lines covered</span> and
+    <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
-  97.79%
+  98.31%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#659be73fd503a1f588f90eb85487753313544157" class="src_link" title="app/controllers/api/users_controller.rb">app/controllers/api/users_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">93.10 %</td>
-            <td class="cell--number">65</td>
-            <td class="cell--number">29</td>
+            <td class="green strong cell--number t-file__coverage">96.43 %</td>
+            <td class="cell--number">69</td>
+            <td class="cell--number">28</td>
             <td class="cell--number">27</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">1.62</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1.68</td>
             
           </tr>
         
@@ -271,9 +271,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#ef7f9750c812dfef8c1246028c5dc87794e7b344" class="src_link" title="spec/requests/api/users_spec.rb">spec/requests/api/users_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">130</td>
-            <td class="cell--number">70</td>
-            <td class="cell--number">70</td>
+            <td class="cell--number">129</td>
+            <td class="cell--number">68</td>
+            <td class="cell--number">68</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.29</td>
             
@@ -301,7 +301,7 @@
     <h3>app/controllers/api/users_controller.rb</h3>
     <h4>
       <span class="green">
-  93.1%
+  96.43%
 </span>
 
       lines covered
@@ -310,9 +310,9 @@
     
 
     <div class="t-line-summary">
-      <b>29</b> relevant lines.
+      <b>28</b> relevant lines.
       <span class="green"><b>27</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
 
     
@@ -477,24 +477,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="15">
+            
             
 
             
 
-            <code class="ruby">      if(params[:page])</code>
+            <code class="ruby">      # if(params[:page])</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
             
 
-            <code class="ruby">        @users = User.paginate(page: params[:page], per_page: 3) # let default values per page be 3</code>
+            <code class="ruby">      #   @users = User.paginate(page: params[:page], per_page: 3) # let default values per page be 3</code>
           </li>
         </div>
       
@@ -505,18 +505,18 @@
 
             
 
-            <code class="ruby">      else</code>
+            <code class="ruby">      # else</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="18">
+            
             
 
             
 
-            <code class="ruby">        @users = User.all</code>
+            <code class="ruby">      #   @users = User.all</code>
           </li>
         </div>
       
@@ -527,7 +527,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">      # end</code>
           </li>
         </div>
       
@@ -543,35 +543,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">      # Check if params provided for pagination</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      render json: @users, only: [:id, :firstName, :lastName, :email]</code>
+            <code class="ruby">      page = params[:page] || 1</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="23">
-            
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      @users = User.paginate(page: page, per_page: 3) # let default values per page be 3</code>
           </li>
         </div>
       
@@ -582,7 +582,7 @@
 
             
 
-            <code class="ruby">    # GET /user/:id</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -593,23 +593,12 @@
 
             
 
-            <code class="ruby">    def show</code>
+            <code class="ruby">      render json: @users, only: [:id, :firstName, :lastName, :email]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      render json: @user, only: [:id, :firstName, :lastName, :email]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -620,7 +609,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -631,13 +620,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
             
 
-            <code class="ruby">    # POST /user</code>
+            <code class="ruby">    # GET /user/:id</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def show</code>
           </li>
         </div>
       
@@ -648,18 +648,18 @@
 
             
 
-            <code class="ruby">    def create</code>
+            <code class="ruby">      render json: @user, only: [:id, :firstName, :lastName, :email]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="31">
-            <span class="hits">4</span>
+          <li class="never" data-hits="" data-linenumber="31">
+            
             
 
             
 
-            <code class="ruby">      @user = User.new(user_params)</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -675,7 +675,51 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">    # POST /user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="34">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def create</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="35">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">      @user = User.new(user_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="37">
             <span class="hits">4</span>
             
 
@@ -686,7 +730,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="34">
+          <li class="covered" data-hits="2" data-linenumber="38">
             <span class="hits">2</span>
             
 
@@ -697,7 +741,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -708,7 +752,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="36">
+          <li class="covered" data-hits="2" data-linenumber="40">
             <span class="hits">2</span>
             
 
@@ -719,7 +763,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -730,7 +774,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -741,57 +785,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
-            
-
-            <code class="ruby">    # PATCH/PUT /user/:id</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    def update</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="42">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      if @user.update(user_params)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="43">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">        render json: @user, only: [:id, :firstName, :lastName, :email]</code>
           </li>
         </div>
       
@@ -802,40 +802,40 @@
 
             
 
-            <code class="ruby">      else</code>
+            <code class="ruby">    # PATCH/PUT /user/:id</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="45">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">        render json: @user.errors, status: :unprocessable_entity</code>
+            
+
+            <code class="ruby">    def update</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="46">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">      end</code>
+            
+
+            <code class="ruby">      if @user.update(user_params)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="47">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">        render json: @user, only: [:id, :firstName, :lastName, :email]</code>
           </li>
         </div>
       
@@ -846,45 +846,34 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      else</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="missed" data-hits="0" data-linenumber="49">
             
             
 
             
 
-            <code class="ruby">    # DELETE /user/:id</code>
+            <code class="ruby">        render json: @user.errors, status: :unprocessable_entity</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="50">
+            
             
 
             
 
-            <code class="ruby">    def destroy</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      @user.destroy</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -895,13 +884,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="52">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
+            <code class="ruby">    # DELETE /user/:id</code>
           </li>
         </div>
       
@@ -912,56 +912,34 @@
 
             
 
-            <code class="ruby">    private</code>
+            <code class="ruby">    def destroy</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
-            
-            
-
-            
-
-            <code class="ruby">      # Use callbacks to share common setup or constraints between actions.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
+          <li class="covered" data-hits="1" data-linenumber="55">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      def set_user</code>
+            <code class="ruby">      @user.destroy</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="57">
-            <span class="hits">4</span>
+          <li class="never" data-hits="" data-linenumber="56">
+            
             
 
             
 
-            <code class="ruby">        @user = User.find(params[:id])</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="59">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
@@ -972,40 +950,51 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
-            
-            
-
-            
-
-            <code class="ruby">      # Only allow a trusted parameter &quot;white list&quot; through.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
+          <li class="covered" data-hits="1" data-linenumber="58">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      def user_params</code>
+            <code class="ruby">    private</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="62">
-            <span class="hits">6</span>
+          <li class="never" data-hits="" data-linenumber="59">
+            
             
 
             
 
-            <code class="ruby">        params.require(:user).permit(:firstName, :lastName, :email)</code>
+            <code class="ruby">      # Use callbacks to share common setup or constraints between actions.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      def set_user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="61">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">        @user = User.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -1016,7 +1005,62 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="63">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="64">
+            
+            
+
+            
+
+            <code class="ruby">      # Only allow a trusted parameter &quot;white list&quot; through.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      def user_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="66">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">        params.require(:user).permit(:firstName, :lastName, :email)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
             
             
 
@@ -1027,7 +1071,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="69">
             
             
 
@@ -4773,8 +4817,8 @@
     
 
     <div class="t-line-summary">
-      <b>70</b> relevant lines.
-      <span class="green"><b>70</b> lines covered</span> and
+      <b>68</b> relevant lines.
+      <span class="green"><b>68</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -6040,13 +6084,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="115">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="115">
+            
             
 
             
 
-            <code class="ruby">  describe &quot;GET /typeahead&quot; do</code>
+            <code class="ruby">  # Rspec for search operation</code>
           </li>
         </div>
       
@@ -6057,7 +6101,7 @@
 
             
 
-            <code class="ruby">    it &quot;searched data exist&quot; do</code>
+            <code class="ruby">  describe &quot;GET /typeahead&quot; do</code>
           </li>
         </div>
       
@@ -6068,7 +6112,7 @@
 
             
 
-            <code class="ruby">      user = User.create! valid_attributes</code>
+            <code class="ruby">    it &quot;searched data exist&quot; do</code>
           </li>
         </div>
       
@@ -6079,7 +6123,7 @@
 
             
 
-            <code class="ruby">      get &quot;/api/typeahead/ura&quot;, headers: valid_headers, as: :json</code>
+            <code class="ruby">      user = User.create! valid_attributes</code>
           </li>
         </div>
       
@@ -6090,7 +6134,7 @@
 
             
 
-            <code class="ruby">      expect(response).to be_successful</code>
+            <code class="ruby">      get &quot;/api/typeahead/ura&quot;, headers: valid_headers, as: :json</code>
           </li>
         </div>
       
@@ -6167,23 +6211,12 @@
 
             
 
-            <code class="ruby">      expect(response).to be_successful</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="127">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">      expect(response.content_type).to match(a_string_including(&quot;application/json&quot;))</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="128">
+          <li class="never" data-hits="" data-linenumber="127">
             
             
 
@@ -6194,7 +6227,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="129">
+          <li class="never" data-hits="" data-linenumber="128">
             
             
 
@@ -6205,7 +6238,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="130">
+          <li class="never" data-hits="" data-linenumber="129">
             
             
 
